@@ -27,3 +27,18 @@ button:hover {
     cursor: pointer;
     color: black;
 }
+
+ul {
+    margin-top: 20px;
+    padding: 10px;
+    list-style-type: none;
+    color: #5f9341;
+}
+
+li {
+    margin-top: 5px;
+}
+
+li a {
+    color: #5f9341;
+}
