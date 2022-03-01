@@ -25,4 +25,5 @@ button {
 
 button:hover {
     cursor: pointer;
+    color: black;
 }
