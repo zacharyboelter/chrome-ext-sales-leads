@@ -5,15 +5,15 @@ const ulEl = document.querySelector('#ul-el');
 
 let myLeads = [];
 
-myLeads = JSON.parse(myLeads)
-
-
 // Click button push to array
 inputBtn.addEventListener("click", function () {
     myLeads.unshift(inputEl.value);
     console.log(myLeads);
     inputEl.value = '';
+    localStorage.setItem("myLeads", JSON.stringify(myLeads) );
     renderLeads();
+
+    console.log( localStorage.getItem("myLeads") )
 })
 
 
