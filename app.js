@@ -2,10 +2,11 @@
 const inputBtn = document.querySelector('#input-btn');
 const inputEl = document.querySelector('#input-el');
 const ulEl = document.querySelector('#ul-el');
+const deleteBtn = document.querySelector('#delete-btn')
 
 let myLeads = [];
 // convert string back to array from local storage and store in var
-let leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads"));
+const leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads"));
 
 // if local is truthy, display the leads
 if (leadsFromLocalStorage) {
@@ -25,6 +26,11 @@ inputBtn.addEventListener("click", function () {
     console.log( localStorage.getItem("myLeads") )
 })
 
+deleteBtn.addEventListener("dblclick", function() {
+    localStorage.clear();
+    myLeads = [];
+    renderLeads();
+})
 
 // return and display array values
 function renderLeads() {

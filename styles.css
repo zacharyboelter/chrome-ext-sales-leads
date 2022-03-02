@@ -15,15 +15,24 @@ input {
 }
 
 button {
-    background-color: #5f9341;
+    background: #5f9341;
+    border: 1px solid #5f9341;
     color: white;
-    border: none;
     padding: 10px 20px;
-    /* margin-left: 10px; */
     font-weight: bold;
 }
 
 button:hover {
+    cursor: pointer;
+    color: black;
+}
+
+#delete-btn {
+    background-color: #fff;
+    color: #5f9341;
+}
+
+#delete-btn:hover {
     cursor: pointer;
     color: black;
 }
