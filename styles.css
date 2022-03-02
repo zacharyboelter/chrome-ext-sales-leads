@@ -8,11 +8,10 @@ body {
 
 input {
     width: 100%;
-    border: 1px solid #5f9341;
     padding: 10px;
     box-sizing: border-box;
-    height: 30px;
-    margin: 10px;
+    border: 1px solid #5f9341;
+    margin-bottom: 4px;
 }
 
 button {

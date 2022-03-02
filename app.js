@@ -5,6 +5,8 @@ const ulEl = document.querySelector('#ul-el');
 
 let myLeads = [];
 
+myLeads = JSON.parse(myLeads)
+
 
 // Click button push to array
 inputBtn.addEventListener("click", function () {
