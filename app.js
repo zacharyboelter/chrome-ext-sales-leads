@@ -4,12 +4,20 @@ const inputEl = document.querySelector('#input-el');
 const ulEl = document.querySelector('#ul-el');
 
 let myLeads = [];
+let leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads"));
+
+
+if (leadsFromLocalStorage) {
+    myLeads = leadsFromLocalStorage;
+    renderLeads();
+}
 
 // Click button push to array
 inputBtn.addEventListener("click", function () {
     myLeads.unshift(inputEl.value);
-    console.log(myLeads);
+    //clear input field
     inputEl.value = '';
+    //set leads to local storage by converting array to string
     localStorage.setItem("myLeads", JSON.stringify(myLeads) );
     renderLeads();
 
