@@ -4,9 +4,10 @@ const inputEl = document.querySelector('#input-el');
 const ulEl = document.querySelector('#ul-el');
 
 let myLeads = [];
+// convert string back to array from local storage and store in var
 let leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads"));
 
-
+// if local is truthy, display the leads
 if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage;
     renderLeads();
