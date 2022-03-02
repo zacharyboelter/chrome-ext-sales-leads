@@ -11,7 +11,7 @@ const leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads"));
 // if local is truthy, display the leads
 if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage;
-    renderLeads();
+    render(myLeads);
 }
 
 // Click button push to array
@@ -21,7 +21,7 @@ inputBtn.addEventListener("click", function () {
     inputEl.value = '';
     //set leads to local storage by converting array to string
     localStorage.setItem("myLeads", JSON.stringify(myLeads) );
-    renderLeads();
+    render(myLeads);
 
     console.log( localStorage.getItem("myLeads") )
 })
@@ -29,17 +29,17 @@ inputBtn.addEventListener("click", function () {
 deleteBtn.addEventListener("dblclick", function() {
     localStorage.clear();
     myLeads = [];
-    renderLeads();
+    render(myLeads);
 })
 
 // return and display array values
-function renderLeads() {
+function render(leads) {
     let listItems = ""
-    for (let i = 0; i < myLeads.length; i++) {
+    for (let i = 0; i < leads.length; i++) {
         listItems +=`
                     <li>
-                        <a href='${myLeads[i]}' target="_blank">
-                            ${myLeads[i]}
+                        <a href='${leads[i]}' target="_blank">
+                            ${leads[i]}
                         </a>
                      </li>
     `;
